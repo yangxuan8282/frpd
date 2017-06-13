@@ -17,7 +17,7 @@ docker network create proxy-network
 
 then run frps with this `docker-compose.yml` template:
 
-> the default token and frp dashboard passwd is `youcanusefrpwithDocker`, you need pass your own token in `environment`, for more environment variables please check Dockerfile  
+> the default token and frp dashboard passwd is `youcanusefrpwithDocker`, you need pass your own token in `environment`, for more environment variables please check [Dockerfile](https://github.com/yangxuan8282/frpd/blob/master/frps/Dockerfile)  
 
 ```
 version: "2"
@@ -112,7 +112,7 @@ or
 
 ```
 
-> `frps` && `frpc` can be run on same machine, but also work if on different one, and you can run `frps` on multiple computer at the same time.
+> `frps` && `frpc` can be run on same machine, but also work if on different one, and you can run `frpc` on multiple computer at the same time.
 
 ### UDP && SSH
 

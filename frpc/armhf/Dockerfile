@@ -1,6 +1,9 @@
 FROM pipill/armhf-nimmis-alpine:3.3
+MAINTAINER Yangxuan <yangxuan8282@gmail.com>
 
 ENV FRP_VERSION=0.11.0
+
+RUN [ "cross-build-start" ]
 
 RUN apk --no-cache --update add curl \
  && mkdir -p /tmp/frp \
@@ -14,6 +17,8 @@ ENV DOCKER_GEN_VERSION=0.7.3
 RUN curl -sL -o docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz \
  && tar -C /usr/local/bin -xvzf docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz \
  && rm /docker-gen-linux-armhf-$DOCKER_GEN_VERSION.tar.gz
+
+RUN [ "cross-build-end" ]
 
 ADD etc /etc
 

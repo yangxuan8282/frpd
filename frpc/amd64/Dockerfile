@@ -1,4 +1,5 @@
 FROM nimmis/alpine:3.3
+MAINTAINER Yangxuan <yangxuan8282@gmail.com>
 
 ENV FRP_VERSION=0.11.0
 
