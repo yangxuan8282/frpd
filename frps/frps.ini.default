@@ -1,0 +1,8 @@
+# frps.ini
+[common]
+bind_port = $BIND_PORT
+vhost_http_port = $VHOST_HTTP_PORT
+privilege_token = $PRIVILEGE_TOKEN
+dashboard_port = $FRP_DASHBOARD_PORT
+dashboard_user = $FRP_DASHBOARD_USER
+dashboard_pwd = $FRP_DASHBOARD_PWD

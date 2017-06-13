@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  frps:
+    image: yangxuan8282/frpds
+    container_name: frpds
+    restart: always
+    ports:
+      - "80:80"
+      - "7000:7000"
+      - "7500:7500"
+
+    environment:
+      - PRIVILEGE_TOKEN=TOKEN_HERE
+
+networks:
+  default:
+    external:
+      name: proxy-network
+

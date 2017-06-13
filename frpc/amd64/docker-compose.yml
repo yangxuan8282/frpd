@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  frpdc:
+    image: yangxuan8282/frpdc
+    container_name: frpdc
+    restart: always
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+
+    environment:
+      - FRP_SERVER_IP=YOUR_FRP_SERVER_IP_HERE
+      - PRIVILEGE_TOKEN=TOKEN_HERE
+
+networks:
+  default:
+    external:
+      name: proxy-network
+
