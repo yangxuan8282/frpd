@@ -7,7 +7,13 @@ It also use docker-gen generates reverse proxy configs for frp and restart frp w
 
 ### Docker Compose
 
-there are two containers: frps (server) and frpc (client)
+there are two containers: frpds (server), which running `frps`
+
+[![](https://images.microbadger.com/badges/image/yangxuan8282/frpds:0.11.0.svg)](https://microbadger.com/images/yangxuan8282/frpds:0.11.0 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/yangxuan8282/frpds:0.11.0.svg)](https://microbadger.com/images/yangxuan8282/frpds:0.11.0 "Get your own version badge on microbadger.com")
+
+and frpdc (client), which running `frpc`
+
+[![](https://images.microbadger.com/badges/image/yangxuan8282/frpdc:0.11.0.svg)](https://microbadger.com/images/yangxuan8282/frpdc:0.11.0 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/yangxuan8282/frpdc:0.11.0.svg)](https://microbadger.com/images/yangxuan8282/frpdc:0.11.0 "Get your own version badge on microbadger.com") 
 
 create network first (on server and client):
 
@@ -91,6 +97,8 @@ networks:
 ```
 
 for more templates, please check this [repo](https://github.com/yangxuan8282/docker-recipes), just remove `LETSENCRYPT_HOST` && `LETSENCRYPT_EMAIL` environment variables
+
+and there is a search engine for docker compose: https://www.composeregistry.com/
 
 ### About
 
