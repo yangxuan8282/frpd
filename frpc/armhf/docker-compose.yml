@@ -11,6 +11,7 @@ services:
     environment:
       - FRP_SERVER_IP=YOUR_FRP_SERVER_IP_HERE
       - PRIVILEGE_TOKEN=TOKEN_HERE
+      #- FRP_PROTOCOL=kcp
 
 networks:
   default:

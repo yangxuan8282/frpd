@@ -1,7 +1,7 @@
 FROM nimmis/alpine:3.3
 MAINTAINER Yangxuan <yangxuan8282@gmail.com>
 
-ENV FRP_VERSION=0.11.0
+ENV FRP_VERSION=0.12.0
 
 RUN apk --no-cache --update add curl \
  && mkdir -p /tmp/frp \
@@ -20,6 +20,8 @@ ADD etc /etc
 
 ENV FRP_SERVER_IP=127.0.0.1 \
     FRP_SERVER_PORT=7000 \
+    FRP_KCP_PORT=7000 \
+    FRP_PROTOCOL=tcp \
     PRIVILEGE_TOKEN=youcanusefrpwithDocker \
     FRP_TYPE=http \
     IF_USE_ENCRYPTION=true \

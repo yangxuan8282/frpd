@@ -6,6 +6,7 @@ if ! [ -f /etc/frp/frps.ini ]; then
 echo "# frps.ini
 [common]
 bind_port = $BIND_PORT
+kcp_bind_port = $KCP_BIND_PORT
 vhost_http_port = $VHOST_HTTP_PORT
 privilege_token = $PRIVILEGE_TOKEN
 dashboard_port = $FRP_DASHBOARD_PORT
